@@ -35,15 +35,15 @@ var productRepo = new DapperProductRepository(conn);
 Console.WriteLine("Please enter the information needed for a new product:");
 Console.WriteLine();
 Console.Write("Name:");
-var pName = Console.ReadLine();
+var productName = Console.ReadLine();
 Console.Write("Price:");
-var pPrice = double.Parse(Console.ReadLine());
+var productPrice = double.Parse(Console.ReadLine());
 Console.Write("Product category:");
-var pCatID = int.Parse(Console.ReadLine());
+var productCatID = int.Parse(Console.ReadLine());
 
-Console.WriteLine($"Inserting new product '{pName}'");
+Console.WriteLine($"Inserting new product '{productName}'");
 
-productRepo.CreateProduct(pName, pPrice, pCatID);
+productRepo.CreateProduct(productName, productPrice, productCatID);
 
 var products = productRepo.GetAllProducts();
 
